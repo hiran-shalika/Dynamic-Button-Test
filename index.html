@@ -26,8 +26,9 @@
                 window.location.href = "article.html";
             }
 
-            // Increment and store the updated click count
-            localStorage.setItem('clickCount', clickCount + 1);
+            // Increment the click count and reset it after the third click
+            clickCount = (clickCount + 1) % 3;
+            localStorage.setItem('clickCount', clickCount);
         }
     </script>
 </body>
